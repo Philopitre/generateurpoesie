@@ -1,0 +1,71 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+#starCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-color: #000014;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 50px auto;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+h1, h2 {
+  color: #333;
+}
+
+button {
+  background-color: #3CA6A6;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #026773;
+}
+
+button.secondary {
+  background-color: #024959;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}

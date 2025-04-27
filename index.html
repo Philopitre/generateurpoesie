@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Générateur de Poésie Ultra 🌟</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <canvas id="starCanvas"></canvas>
+  <div class="container fade-in">
+    <h1>Générateur de Poésie Ultra 🎨</h1>
+
+    <div class="controls">
+      <select id="themeSelector">
+        <option value="random">🎲 Surprise</option>
+        <option value="Nature">🌳 Nature</option>
+        <option value="Rêves">🌌 Rêves</option>
+        <option value="Nuit">🌙 Nuit</option>
+        <option value="Amour">❤️ Amour</option>
+      </select>
+      <br>
+      <button onclick="generateSinglePoem()">Poème Classique ✨</button>
+      <button onclick="generateMultiplePoems()" class="secondary">Multiples Poèmes 🌟</button>
+      <button onclick="generateHaiku()" class="secondary">Générer un Haïku 🐦</button>
+      <button onclick="generatePoemWithRimes()" class="secondary">Poème avec Rimes 🎵</button>
+      <input type="number" id="poemCount" min="1" max="20" placeholder="Nombre de poèmes" style="width: 150px;">
+      
+    <button onclick="exportPoems()" class="secondary">Exporter en TXT 📄</button>
+    <button onclick="sharePoem()" class="secondary">Partager 📢</button>
+    <button onclick="toggleMusic()" class="secondary">🎶 Musique</button>
+    
+    </div>
+
+    <div id="result" class="result"></div>
+
+    <h2>Multiples Poèmes :</h2>
+    <div id="multipleResults" class="result"></div>
+  </div>
+
+  <script src="./script.js"></script>
+  <script src="./stars.js"></script>
+
+    <audio id="backgroundMusic" loop>
+      <source src="./music.mp3" type="audio/mp3">
+    </audio>
+    <audio id="typewriterSound">
+      <source src="./typewriter.mp3" type="audio/mp3">
+    </audio>
+    </body>
+    
+</html>
